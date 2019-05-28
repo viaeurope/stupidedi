@@ -85,14 +85,14 @@ module Stupidedi
             # it is not terminated by an element separator. The {read_character}
             # method defined by TokenReader skips past control characters.
             remaining.flatmap do |w|
-              w.read_character.flatmap do |isa16, cR|
+              w.stream.read_character.flatmap do |isa16, cR|
                 elements << SimpleElementTok.build(isa16, w.input, cR.input)
 
                 # The character after the last element is defined to be the
                 # segment terminator. The {read_character} method here, defined
                 # by StreamReader, does not skip past control character, so the
                 # separator could be a control character.
-                cR.stream.read_character.flatmap do |char_, dR|
+                cR.read_character.flatmap do |char_, dR|
                   if char_ == separators.element
                     failure("element separator and segment terminator must be distinct", dR.input)
                   else

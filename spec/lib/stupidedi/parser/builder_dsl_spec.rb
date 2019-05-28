@@ -1416,7 +1416,7 @@ describe Stupidedi::Parser::BuilderDsl, "strict validation" do
       end
     end
 
-    fcontext "composite" do
+    context "composite" do
       context "when element is missing" do
         let(:b) do
           strict(Detail("2", Segment(10, COS(), s_mandatory, bounded(1))))

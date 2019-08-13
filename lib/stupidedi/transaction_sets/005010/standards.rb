@@ -5,6 +5,7 @@ module Stupidedi
       module Standards
         SegmentReqs = Versions::FiftyTen::SegmentReqs
 
+        autoload :IM210, "stupidedi/transaction_sets/005010/standards/IM210"
         autoload :BE834, "stupidedi/transaction_sets/005010/standards/BE834"
         autoload :FA999, "stupidedi/transaction_sets/005010/standards/FA999"
         autoload :FA997, "stupidedi/transaction_sets/005010/standards/FA997"

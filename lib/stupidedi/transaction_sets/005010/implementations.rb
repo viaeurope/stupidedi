@@ -14,6 +14,10 @@ module Stupidedi
           NotUsed     = Common::Implementations::ElementReqs::NotUsed
         end
 
+        module UPS
+          autoload :IM210,  "stupidedi/transaction_sets/005010/implementations/UPS-IM210"
+        end
+
         module X212
           autoload :HR276,  "stupidedi/transaction_sets/005010/implementations/X212-HR276"
         end

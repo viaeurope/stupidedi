@@ -392,11 +392,6 @@ module Stupidedi
             "TLD" => "Intermodal Trailer/Container Load (Rail)",
             "TRY" => "Tray",
             "PLT94" => "Pallet - Wood"))
-        E122  = t::ID.new(:E122 , "Rate/Value Qualifier"                 , 2, 2,
-          s::CodeList.build(
-            "FR" => "Flat Rate",
-            "PM" => "Per Mile",
-            "PL" => "Per Load"))
         E116  = t::ID.new(:E116 , "Postal Code"                          , 3, 15,
           s::CodeList.external("51"))
         E117  = t::Nn.new(:E117 , "Prepaid Amount"                       , 1, 15, 2)
@@ -429,6 +424,11 @@ module Stupidedi
             "DMC" => "Demurrage Period 3",
             "ECR" => "Econo Rate",
             "QUO" => "Quoted Rate"))
+        E122  = t::ID.new(:E122 , "Rate/Value Qualifier"                 , 2, 2,
+          s::CodeList.build(
+            "FR" => "Flat Rate",
+            "PM" => "Per Mile",
+            "PL" => "Per Load"))
         E123  = t::Nn.new(:E123 , "Number of Received Transaction Sets"  , 1, 6, 0)
         E124  = t::AN.new(:E124 , "Application Receiver's Code"          , 2, 15)
         E127  = t::AN.new(:E127 , "Reference Identification"             , 1, 30)
